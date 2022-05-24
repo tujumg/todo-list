@@ -6,6 +6,7 @@ const db = mongoose.connection
 
 db.on('error',()=>{
     console.log('mongodb error!')
+    console.log(process.env.MONGODB_URI) //確認是否成功輸入MONGODB_URI
 })
 db.once('open',()=>{
     console.log('mongodb connected!')
